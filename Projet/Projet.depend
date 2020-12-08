@@ -13,14 +13,21 @@
 	<stdlib.h>
 	<stdio.h>
 
-1607434601 source:g:\cyril\images\upmc\s5\3ee103\projet\estimation de mouvement\projet\main.c
+1607444149 source:g:\cyril\images\upmc\s5\3ee103\projet\estimation de mouvement\projet\main.c
 	"matrice.h"
+	"grad.h"
 
-1607434517 g:\cyril\images\upmc\s5\3ee103\projet\estimation de mouvement\projet\matrice.h
+1607438467 g:\cyril\images\upmc\s5\3ee103\projet\estimation de mouvement\projet\matrice.h
 	<stdlib.h>
 	<stdio.h>
 	"myBmpGris.h"
 
-1607434275 source:g:\cyril\images\upmc\s5\3ee103\projet\estimation de mouvement\projet\matrice.c
+1607438462 source:g:\cyril\images\upmc\s5\3ee103\projet\estimation de mouvement\projet\matrice.c
 	"matrice.h"
+
+1607444145 source:g:\cyril\images\upmc\s5\3ee103\projet\estimation de mouvement\projet\grad.c
+	"grad.h"
+	"matrice.h"
+
+1607443528 g:\cyril\images\upmc\s5\3ee103\projet\estimation de mouvement\projet\grad.h
 

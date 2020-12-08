@@ -1,7 +1,10 @@
 #include "matrice.h"
 
 
-// Construction de Matrice
+/** Construction de Matrice
+  * @param dimension X de la matrice
+  * @param dimension Y de la matrice
+  */
 double** createMatrice(int dimX, int dimY){
     int i;
     double** res;                                           // résultat
@@ -12,7 +15,11 @@ double** createMatrice(int dimX, int dimY){
     return res;
 }
 
-// Destruction de Matrice
+/**Destruction de Matrice
+  * @param Matrice à detruire
+  * @param dimension X de la matrice
+  * @param dimension Y de la matrice
+  */
 void destroyMatrice(double** matrice, int dimX, int dimY){
     int i;
     for(i =0; i < dimX; i++){
@@ -22,7 +29,11 @@ void destroyMatrice(double** matrice, int dimX, int dimY){
     matrice = NULL;
 }
 
-// Impression de matrice
+/** Impression de matrice
+  * @param Matrice à imprimer
+  * @param dimension X de la matrice
+  * @param dimension Y de la matrice
+  */
 void printMatrice(double** matrice, int dimX, int dimY){
     int i, j;
     for(i = 0; i < dimX; i++){
@@ -33,7 +44,9 @@ void printMatrice(double** matrice, int dimX, int dimY){
     }
 }
 
-// Conversion bmp vers une matrice de double
+/** Conversion bmp vers une matrice de double
+  * @param Structure d'une image de type Bmp à convertir
+  */
 double** bmpToMatrice(BmpImg bmpImg){
     int i, j;
     double** res = createMatrice(bmpImg.dimX, bmpImg.dimY); //initialisation résultat
