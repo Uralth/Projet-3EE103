@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1606403686 source:g:\cyril\images\upmc\s5\3ee103\projet\estimation de mouvement\mybmpgris.c
+	"myBmpGris.h"
+
+1597922256 g:\cyril\images\upmc\s5\3ee103\projet\estimation de mouvement\mybmpgris.h
+	<stdlib.h>
+	<stdio.h>
+
+1606403686 source:g:\cyril\images\upmc\s5\3ee103\projet\estimation de mouvement\projet\mybmpgris.c
+	"myBmpGris.h"
+
+1597922256 g:\cyril\images\upmc\s5\3ee103\projet\estimation de mouvement\projet\mybmpgris.h
+	<stdlib.h>
+	<stdio.h>
+
+1607434601 source:g:\cyril\images\upmc\s5\3ee103\projet\estimation de mouvement\projet\main.c
+	"matrice.h"
+
+1607434517 g:\cyril\images\upmc\s5\3ee103\projet\estimation de mouvement\projet\matrice.h
+	<stdlib.h>
+	<stdio.h>
+	"myBmpGris.h"
+
+1607434275 source:g:\cyril\images\upmc\s5\3ee103\projet\estimation de mouvement\projet\matrice.c
+	"matrice.h"
+
