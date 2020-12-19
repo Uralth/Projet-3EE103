@@ -84,6 +84,6 @@ void fillGrad_t(double** Intensite1,double** Intensite2,double** matRes,int dimX
             //printf("x = %d\n",x);
             //printf("y = %d\n",y);
 		}
-		printf("ca marche colonne changee\n");
+		//printf("ca marche colonne changee\n");
 	}
 }

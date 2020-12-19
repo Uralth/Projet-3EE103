@@ -13,23 +13,51 @@
 	<stdlib.h>
 	<stdio.h>
 
-1607448065 source:g:\cyril\images\upmc\s5\3ee103\projet\estimation de mouvement\projet\main.c
+1607434601 source:g:\cyril\images\upmc\s5\3ee103\projet\estimation de mouvement\projet\main.c
 	"matrice.h"
-	"grad.h"
 
-1607438467 g:\cyril\images\upmc\s5\3ee103\projet\estimation de mouvement\projet\matrice.h
+1607434517 g:\cyril\images\upmc\s5\3ee103\projet\estimation de mouvement\projet\matrice.h
 	<stdlib.h>
 	<stdio.h>
 	"myBmpGris.h"
 
-1607438462 source:g:\cyril\images\upmc\s5\3ee103\projet\estimation de mouvement\projet\matrice.c
+1607434275 source:g:\cyril\images\upmc\s5\3ee103\projet\estimation de mouvement\projet\matrice.c
 	"matrice.h"
 
-1607448118 source:g:\cyril\images\upmc\s5\3ee103\projet\estimation de mouvement\projet\grad.c
+1608231541 source:g:\documents\informatique\c\projet l3s1 - estimation de mouvement\projet-3ee103-main\projet\main.c
+	"matrice.h"
+	"SpeedCalculator.h"
+	"grad.h"
+
+1608231463 g:\documents\informatique\c\projet l3s1 - estimation de mouvement\projet-3ee103-main\projet\matrice.h
+	<stdlib.h>
+	<stdio.h>
+	"myBmpGris.h"
+
+1607435544 g:\documents\informatique\c\projet l3s1 - estimation de mouvement\projet-3ee103-main\projet\mybmpgris.h
+	<stdlib.h>
+	<stdio.h>
+
+1608231484 source:g:\documents\informatique\c\projet l3s1 - estimation de mouvement\projet-3ee103-main\projet\matrice.c
 	"matrice.h"
 
-1607447932 g:\cyril\images\upmc\s5\3ee103\projet\estimation de mouvement\projet\grad.h
+1607435544 source:g:\documents\informatique\c\projet l3s1 - estimation de mouvement\projet-3ee103-main\projet\mybmpgris.c
+	"myBmpGris.h"
+
+1608039583 g:\documents\informatique\c\projet l3s1 - estimation de mouvement\projet-3ee103-main\projet\grad.h
 	"matrice.h"
 	<stdlib.h>
 	<stdio.h>
+
+1608049532 source:g:\documents\informatique\c\projet l3s1 - estimation de mouvement\projet-3ee103-main\projet\grad.c
+	"matrice.h"
+
+1608207527 source:g:\documents\informatique\c\projet l3s1 - estimation de mouvement\projet-3ee103-main\projet\speedcalculator.c
+	"SpeedCalculator.h"
+
+1608049302 g:\documents\informatique\c\projet l3s1 - estimation de mouvement\projet-3ee103-main\projet\speedcalculator.h
+	"matrice.h"
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
 

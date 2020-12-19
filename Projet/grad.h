@@ -1,9 +1,9 @@
-#ifndef _grad_h_
+#ifdef _grad_h_
 #define _grad_h_
 #include "matrice.h"
 #include <stdlib.h>
 #include <stdio.h>
-float moyenne2Points(float a, float b);
+float distance2Points(float a, float b);
 double getIntensityPixel(double** mat,int x,int y);
 double gradx(double** mat,int x,int y,int dimX);
 double grady(double** mat,int x,int y,int dimY);
