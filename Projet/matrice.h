@@ -6,29 +6,19 @@
 #include "myBmpGris.h"
 
 
-/** Construction de Matrice
-  * @param dimension X de la matrice
-  * @param dimension Y de la matrice
-  */
+// Construction de Matrice
 double** createMatrice(int dimX, int dimY);
 
-/**Destruction de Matrice
-  * @param Matrice à detruire
-  * @param dimension X de la matrice
-  * @param dimension Y de la matrice
-  */
+// Destruction de Matrice
 void destroyMatrice(double** matrice, int dimX, int dimY);
 
-/** Impression de matrice
-  * @param Matrice à imprimer
-  * @param dimension X de la matrice
-  * @param dimension Y de la matrice
-  */
+// Impression de matrice
 void printMatrice(double** matrice, int dimX, int dimY);
 
-/** Conversion bmp vers une matrice de double
-  * @param Structure d'une image de type Bmp à convertir
-  */
+//copie de matrice de taille égale
+void copieMatrice(double** mat1,double** mat2,int dimX,int dimY);
+
+// Conversion bmp vers une matrice de double
 double** bmpToMatrice(BmpImg bmpImg);
 
 

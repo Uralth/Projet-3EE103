@@ -1,10 +1,7 @@
 #include "matrice.h"
 
 
-/** Construction de Matrice
-  * @param dimension X de la matrice
-  * @param dimension Y de la matrice
-  */
+// Construction de Matrice
 double** createMatrice(int dimX, int dimY){
     int i;
     double** res;                                           // résultat
@@ -15,11 +12,7 @@ double** createMatrice(int dimX, int dimY){
     return res;
 }
 
-/**Destruction de Matrice
-  * @param Matrice à detruire
-  * @param dimension X de la matrice
-  * @param dimension Y de la matrice
-  */
+// Destruction de Matrice
 void destroyMatrice(double** matrice, int dimX, int dimY){
     int i;
     for(i =0; i < dimX; i++){
@@ -29,11 +22,7 @@ void destroyMatrice(double** matrice, int dimX, int dimY){
     matrice = NULL;
 }
 
-/** Impression de matrice
-  * @param Matrice à imprimer
-  * @param dimension X de la matrice
-  * @param dimension Y de la matrice
-  */
+// Impression de matrice
 void printMatrice(double** matrice, int dimX, int dimY){
     int i, j;
     for(i = 0; i < dimX; i++){
@@ -43,10 +32,17 @@ void printMatrice(double** matrice, int dimX, int dimY){
         printf("\n");
     }
 }
+// Copie de matrice de taille égale
+void copieMatrice(double** mat1,double** mat2,int dimX,int dimY){
+    int i, j;
+    for(i = 0; i < dimX; i++){
+        for(j = 0; j < dimY; j++){
+            mat2[i][j] = mat1[i][j]; //copie des éléments de mat1 dans mat2
+        }
+    }
+}
 
-/** Conversion bmp vers une matrice de double
-  * @param Structure d'une image de type Bmp à convertir
-  */
+// Conversion bmp vers une matrice de double
 double** bmpToMatrice(BmpImg bmpImg){
     int i, j;
     double** res = createMatrice(bmpImg.dimX, bmpImg.dimY); //initialisation résultat
