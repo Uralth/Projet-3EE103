@@ -12,6 +12,14 @@
   */
 double** createMatrice(int dimX, int dimY);
 
+/** Remplissage de matrice avec une valeur particulière
+  * @param Matrice
+  * @param dimension X de la matrice
+  * @param dimension Y de la matrice
+  * @param valeur
+  */
+void fillMatrice(double** matrice, int dimX, int dimY, double value);
+
 /**Destruction de Matrice
   * @param Matrice à detruire
   * @param dimension X de la matrice
