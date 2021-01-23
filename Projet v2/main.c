@@ -1,5 +1,4 @@
 #include "matrice.h"
-#include "SpeedCalculator.h"
 #include "SpeedCalculator2.h"
 #include "grad.h"
 #include "Umoy.h"

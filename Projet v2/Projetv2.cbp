@@ -31,10 +31,10 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="SpeedCalculator.c">
+		<Unit filename="SpeedCalculator2.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="SpeedCalculator.h" />
+		<Unit filename="SpeedCalculator2.h" />
 		<Unit filename="Umoy.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -55,6 +55,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="myBmpGris.h" />
+		<Unit filename="portfolio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="portfolio.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
