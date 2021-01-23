@@ -1,7 +1,8 @@
 #include "matrice.h"
-#include "SpeedCalculator.h"
+#include "SpeedCalculator2.h"
 #include "grad.h"
 #include "Umoy.h"
+#include "portfolio.h"
 #define FILENAME "Untitled.bmp"
 #define FILENAME2 "Untitled_2.bmp"
 

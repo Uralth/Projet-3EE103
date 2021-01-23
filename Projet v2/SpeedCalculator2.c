@@ -1,16 +1,12 @@
-#include "SpeedCalculator.h"
+#include "SpeedCalculator2.h"
 
-double** u(double** GradientX,double** GradientY,double** GradientT,int dimX,int dimY,float alpha){
+PrtVue vit(double** GradientX,double** GradientY,double** GradientT,int dimX,int dimY,float alpha){
 	/* rajouter la marge d'erreur*/
 	int i,j,Condition_arret=0,n=0;
-	Umoy u_moy = InitUmoy(dimX,dimY);
-	double** res;
+	Umoy u_moy = InitUmoy(dimX,dimY),v_moy = InitUmoy(dimX,dimY);
+	PrtVue res;
 	double Ix,Iy,It,moyenne_termes =0.0,moy_t=0.0,limite=1.0/(10*dimX*dimY),diff;
     //printf("est rentr?dans la fonction\n");
-	res = malloc(dimX*sizeof(double*));                     // lignes
-    for(i = 0; i < dimX; i++){
-        res[i] = calloc(dimY, sizeof(double));              // colonnes
-    }
     //printf("==============================mat cree:\n");
     //printMatrice(res,dimX,dimY);
     while(Condition_arret==0){
