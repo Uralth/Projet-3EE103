@@ -15,7 +15,7 @@ int main(){
     double** matriceGradY = createMatrice(image.dimX,image.dimY);
     double** matriceGrad_t= createMatrice(image.dimX,image.dimY);
     double** vit2 = createMatrice(image.dimX,image.dimY);
-    double** vit;
+    PrtVue vit1;
 
     /* initialisation de structure pour umoy*/
     //Umoy u_m = InitUmoy(image.dimX,image.dimY);;
@@ -29,7 +29,7 @@ int main(){
 
 
     /* Calcul de u */
-    vit = u(matriceGradX,matriceGradY,matriceGrad_t,image.dimX,image.dimY,3.0);
+    vit1 = vit(matriceGradX,matriceGradY,matriceGrad_t,image.dimX,image.dimY,3.0);
 //    printf("=================Grad X=============\n");
 //    printMatrice(matriceGradX, image.dimX, image.dimY);
 //    printf("=================Grad Y=============\n");
@@ -37,7 +37,7 @@ int main(){
 //    printf("=================Grad t=============\n");
 //    printMatrice(matriceGrad_t, image.dimX, image.dimY);
     printf("=================u=============\n");
-    printMatrice(vit, image.dimX, image.dimY);
+    printMatrice(vit1.u, image.dimX, image.dimY);
     //printf("=================test=============\n");
     //printf("moyenne = %f",calcMoyCase(matriceGradX, image.dimX, image.dimY));
     //printMatrice(u_m.U_moy,image.dimX,image.dimY);

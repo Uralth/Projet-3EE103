@@ -8,6 +8,6 @@
 #include <stdlib.h>
 #include <math.h>
 
-double** vit(double** GradientX,double** GradientY,double** GradientT,int dimX,int dimY,float alpha);
+PrtVue vit(double** GradientX,double** GradientY,double** GradientT,int dimX,int dimY,float alpha);
 
 #endif
