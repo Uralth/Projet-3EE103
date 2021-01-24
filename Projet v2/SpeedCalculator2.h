@@ -15,6 +15,7 @@
   * @param Dimension X de l'image
   * @param Dimension Y de l'image
   * @param Parametre alpha de ponderation
+  * @return Structure de U et V
   */
 PrtVue vit(double** GradientX,double** GradientY,double** GradientT,int dimX,int dimY,float alpha);
 

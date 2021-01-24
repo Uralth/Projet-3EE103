@@ -3,6 +3,7 @@
 /** Initialisation d'un conteneur pour les vitesses
   * @param Dimension X de l'image
   * @param Dimension Y de l'image
+  * @return conteneur de U et V
   */
 PrtVue InitPrtVue(int dimX, int dimY){
 	PrtVue res;

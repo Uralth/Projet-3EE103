@@ -3,6 +3,7 @@
 /** Initialisation des matrices Umoy et Somme à 0
 * @param Dimension X
 * @param Dimension Y
+* @return Umoy initialisée a 0
 */
 Umoy InitUmoy(int dimX,int dimY){
 	Umoy res;
@@ -20,6 +21,7 @@ Umoy InitUmoy(int dimX,int dimY){
   * @param Tableau source
   * @param Dimension X
   * @param Dimension Y
+  * @return Valeur moyenne
   */
 double calcMoyCase(double** u,int sizeX, int sizeY){
     int i,j;
@@ -32,7 +34,7 @@ double calcMoyCase(double** u,int sizeX, int sizeY){
     return res/(sizeX*sizeY);
 }
 
-/** Met a jour les parameptres de somme et de moyenne, et nombre de termes stockés
+/** Met a jour les parametres de somme et de moyenne, et nombre de termes stockés
   * @param U moyen
   * @param Tableau source
   */

@@ -9,6 +9,7 @@
 /** Construction de Matrice
   * @param dimension X de la matrice
   * @param dimension Y de la matrice
+  * @return Matrice initialisée à 0
   */
 double** createMatrice(int dimX, int dimY);
 
@@ -36,6 +37,7 @@ void printMatrice(double** matrice, int dimX, int dimY);
 
 /** Conversion bmp vers une matrice de double
   * @param Structure d'une image de type Bmp à convertir
+  * @return Matrice correspondant a l'image
   */
 double** bmpToMatrice(BmpImg bmpImg);
 
@@ -51,7 +53,8 @@ void MatriceToTxt(double** matrice, int dimX, int dimY, FILE *fichier);
   * @param Matrice source
   * @param dimension X de la matrice
   * @param dimension Y de la matrice
-  * @param facteur d'échantillonnage
+  * @param facteur d'echantillonnage
+  * @return Matrice echantillonnee
   */
 double** sampleMatrix(double** matrice, int dimX, int dimY, int n);
 
@@ -59,8 +62,9 @@ double** sampleMatrix(double** matrice, int dimX, int dimY, int n);
   * @param Matrice source
   * @param dimension X de la matrice
   * @param dimension Y de la matrice
-  * @param facteur d'échantillonnage
+  * @param facteur d'echantillonnage
+  * @return Matrice interpolee
   */
-double** simpleMatrixExtrapolation(double** matrice, int dimX, int dimY, int n);
+double** simpleMatrixInterpolation(double** matrice, int dimX, int dimY, int n);
 
 #endif

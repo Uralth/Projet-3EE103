@@ -3,6 +3,7 @@
 /** Distance entre 2 points
   * @param Premier point
   * @param Deuxieme point
+  * @return Distance
   */
 double distance2Points(double a, double b){
     return (a-b)/2;
@@ -12,6 +13,7 @@ double distance2Points(double a, double b){
   * @param Matrice des pixels de l'image source
   * @param Position X du pixel
   * @param Position Y du pixel
+  * @return Intensite
   */
 double getIntensityPixel(double** mat,int x,int y){
     return mat[x][y];
@@ -22,6 +24,7 @@ double getIntensityPixel(double** mat,int x,int y){
   * @param Position X du pixel
   * @param Position Y du pixel
   * @param Dimension X de l'image
+  * @return Gradient en X
   */
 double gradX(double** mat,int x, int y,int dimX){
     if (x==0){
@@ -40,6 +43,7 @@ double gradX(double** mat,int x, int y,int dimX){
   * @param Position X du pixel
   * @param Position Y du pixel
   * @param Dimension Y de l'image
+  * @return Gradient en Y
   */
 double gradY(double** mat,int x, int y,int dimY){
     if (y==0){
@@ -58,6 +62,7 @@ double gradY(double** mat,int x, int y,int dimY){
   * @param Matrice des pixels de l'image source 2
   * @param Position X du pixel
   * @param Position Y du pixel
+  * @return Gradient en Temps
   */
 double grad_t(double** mat1,double** mat2,int x, int y){
     return getIntensityPixel(mat2,x,y)-getIntensityPixel(mat1,x,y);
