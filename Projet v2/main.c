@@ -35,31 +35,41 @@ int main(){
 
     /* Calcul de u */
     vit1 = vit(matriceGradX,matriceGradY,matriceGrad_t,image.dimX,image.dimY,3.0);
-//    printf("=================Grad X=============\n");
-//    printMatrice(matriceGradX, image.dimX, image.dimY);
-//    printf("=================Grad Y=============\n");
-//    printMatrice(matriceGradY, image.dimX, image.dimY);
-//    printf("=================Grad t=============\n");
-//    printMatrice(matriceGrad_t, image.dimX, image.dimY);
-    printf("=================u=============\n");
+    //    printf("=================Grad X=============\n");
+    //    printMatrice(matriceGradX, image.dimX, image.dimY);
+    //    printf("=================Grad Y=============\n");
+    //    printMatrice(matriceGradY, image.dimX, image.dimY);
+    //    printf("=================Grad t=============\n");
+    //    printMatrice(matriceGrad_t, image.dimX, image.dimY);
+    printf("=============== u ===============\n");
     printMatrice(vit1.u, image.dimX, image.dimY);
+
+    printf("\n=============== v ===============\n");
+    printMatrice(vit1.v, image.dimX, image.dimY);
     //printf("=================test=============\n");
     //printf("moyenne = %f",calcMoyCase(matriceGradX, image.dimX, image.dimY));
     //printMatrice(u_m.U_moy,image.dimX,image.dimY);
+
+
+    //Ecriture dans les fichiers
+    printf("\nEcriture des matrices dans les fichiers...\n");
     if( fichierTxt != NULL ) {
         MatriceToTxt(vit1.u, image.dimX, image.dimY,fichierTxt);
         fclose(fichierTxt);
+        printf("\nEcriture dans fichier 1 finie\n");
     } else { // Sinon on affiche un message
-        printf ( " Erreur d'ouverture du fichier !" );
+        printf ( "Erreur d'ouverture du fichier 1 !\n" );
     }
 
     if( fichierTxt2 != NULL ) {
         MatriceToTxt(vit1.v, image.dimX, image.dimY,fichierTxt2);
         fclose(fichierTxt2);
+        printf("\nEcriture dans fichier 2 finie\n");
     } else { // Sinon on affiche un message
-        printf ( " Erreur d'ouverture du fichier !" );
+        printf ( "Erreur d'ouverture du fichier 2 !" );
     }
 
+    //Nettoyage
     freeBmpImg(&image);
     freeBmpImg(&image2);
     destroyMatrice(matrice, image.dimX,image.dimY);
