@@ -24,7 +24,6 @@ double getIntensityPixel(double** mat,int x,int y){
   * @param Dimension X de l'image
   */
 double gradX(double** mat,int x, int y,int dimX){
-    //retourne le gradient selon l'axe x
     if (x==0){
         return getIntensityPixel(mat,x+1,y)/2;
     }
@@ -43,7 +42,6 @@ double gradX(double** mat,int x, int y,int dimX){
   * @param Dimension Y de l'image
   */
 double gradY(double** mat,int x, int y,int dimY){
-    //retourne le gradient selon l'axe y
     if (y==0){
         return getIntensityPixel(mat,x,y+1)/2;
     }
@@ -62,7 +60,6 @@ double gradY(double** mat,int x, int y,int dimY){
   * @param Position Y du pixel
   */
 double grad_t(double** mat1,double** mat2,int x, int y){
-    //retourne le gradient selon le temps
     return getIntensityPixel(mat2,x,y)-getIntensityPixel(mat1,x,y);
 }
 
@@ -76,16 +73,8 @@ void fillGradX(double** Intensite,double** matRes,int dimX,int dimY){
 	int x,y;
 	for(y=0;y<dimY;y++){
 		for(x=0;x<dimX;x++){
-            //printf("==============================\n");
             matRes[x][y] = gradX(Intensite,x,y,dimX);
-            // printMatrice(matRes,dimX,dimY);
-            // printf("ca marche l\n");
-            // printf("x = %d\n",x);
-            // printf("y = %d\n",y);
-
-
 		}
-		//printf("ça marche colonne changee\n");
 	}
 }
 
@@ -99,14 +88,8 @@ void fillGradY(double** Intensite,double** matRes,int dimX,int dimY){
 	int x,y;
 	for(y=0;y<dimY;y++){
 		for(x=0;x<dimX;x++){
-            // printf("==============================\n");
             matRes[x][y] = gradY(Intensite,x,y,dimY);
-            // printMatrice(matRes,dimX,dimY);
-            // printf("ca marche l\n");
-            // printf("x = %d\n",x);
-            // printf("y = %d\n",y);
 		}
-		// printf("ca marche colonne changee\n");
 	}
 }
 
@@ -121,13 +104,7 @@ void fillGrad_t(double** Intensite1,double** Intensite2,double** matRes,int dimX
     int x,y;
 	for(y=0;y<dimY;y++){
 		for(x=0;x<dimX;x++){
-            //printf("==============================\n");
             matRes[x][y] = grad_t(Intensite1,Intensite2,x,y);
-            //printMatrice(matRes,dimX,dimY);
-            //printf("ca marche l\n");
-            //printf("x = %d\n",x);
-            //printf("y = %d\n",y);
 		}
-		//printf("ca marche colonne changee\n");
 	}
 }

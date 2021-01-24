@@ -47,14 +47,12 @@ double** bmpToMatrice(BmpImg bmpImg);
   */
 void MatriceToTxt(double** matrice, int dimX, int dimY, FILE *fichier);
 
+/** Echantillon par un facteur n
+  * @param Matrice source
+  * @param dimension X de la matrice
+  * @param dimension Y de la matrice
+  * @param facteur d'échantillonnage
+  */
+double** sampleMatrix(double** matrice, int dimX, int dimY, int n);
+
 #endif
-
-
-//extern struct BmpImg BmpImg;
-
-/*typedef struct{
-	int dimX;	    // Dimension en x (hauteur)
-	int dimY;		// Dimension en y (largeur)
-	double** data;	// Matrice contenant les données (double)
-} Matrice;*/
-

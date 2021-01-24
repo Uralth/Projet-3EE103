@@ -65,4 +65,4 @@ void fillGradY(double** Intensite, double** matRes,int dimX,int dimY);
   * @param Dimension Y de l'image
   */
 void fillGrad_t(double** Intensite1,double** Intensite2, double** matRes,int dimX,int dimY);
-#endif // _grad_h_
+#endif

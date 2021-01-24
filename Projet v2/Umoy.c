@@ -46,21 +46,3 @@ void UpdateUmoy(Umoy* U,double** u){
 		}
 	}
 }
-
-// void test(int dimX,int dimY){
-// 	int i,j;
-// 	Umoy uMoy = InitUmoy(dimX,dimY);
-// 	double** test = createMatrice(dimX,dimY);                     // lignes
-//     for (i=0;i<uMoy.dimX;i++){
-// 		for (j=0;j<uMoy.dimY;j++){
-// 			test[i][j] = 1.0;
-// 		}
-// 	}
-// 	printf("=================test(av Update)=============\n");
-// 	printMatrice(uMoy.U_moy,dimX,dimY);
-// 	UpdateUmoy(uMoy,test);
-// 	printf("=================Somme(av Update)=============\n");
-// 	printMatrice(uMoy.Somme,dimX,dimY);
-// 	printf("=================test(av Update)=============\n");
-// 	printMatrice(uMoy.U_moy,dimX,dimY);
-// }

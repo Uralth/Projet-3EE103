@@ -90,3 +90,20 @@ void MatriceToTxt(double** matrice, int dimX, int dimY, FILE *fichier){
     }
 }
 
+/** Echantillon par un facteur n
+  * @param Matrice source
+  * @param dimension X de la matrice
+  * @param dimension Y de la matrice
+  * @param facteur d'échantillonnage
+  */
+double** sampleMatrix(double** matrice, int dimX, int dimY, int n){
+    int i, j;
+    double** res = createMatrice(dimX/n, dimY/n);
+    for(i = 0; i < dimX/n; i++){
+        for(j = 0; j < dimY/n; j++){
+            res[i][j] = matrice[i*4][j*4];
+        }
+    }
+    return res;
+}
+
