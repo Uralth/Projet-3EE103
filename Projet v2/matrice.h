@@ -55,4 +55,12 @@ void MatriceToTxt(double** matrice, int dimX, int dimY, FILE *fichier);
   */
 double** sampleMatrix(double** matrice, int dimX, int dimY, int n);
 
+/** Extrapolation de matrice d'un facteur n
+  * @param Matrice source
+  * @param dimension X de la matrice
+  * @param dimension Y de la matrice
+  * @param facteur d'échantillonnage
+  */
+double** simpleMatrixExtrapolation(double** matrice, int dimX, int dimY, int n);
+
 #endif

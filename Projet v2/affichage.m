@@ -25,7 +25,7 @@ B1 = reshape(B1, dim);
 figure
 image(img);
 
-%Traçage des vecteurs
+%Traçage des vecteurs (non superposée car axes x,y en C differents)
 figure
 quiver(B,B1);
 

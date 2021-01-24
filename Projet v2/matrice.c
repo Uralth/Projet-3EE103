@@ -101,7 +101,25 @@ double** sampleMatrix(double** matrice, int dimX, int dimY, int n){
     double** res = createMatrice(dimX/n, dimY/n);
     for(i = 0; i < dimX/n; i++){
         for(j = 0; j < dimY/n; j++){
-            res[i][j] = matrice[i*4][j*4];
+            res[i][j] = matrice[i*n][j*n];
+        }
+    }
+    return res;
+}
+
+/** Extrapolation de matrice d'un facteur n
+  * @param Matrice source
+  * @param dimension X de la matrice
+  * @param dimension Y de la matrice
+  * @param facteur d'échantillonnage
+  */
+double** simpleMatrixExtrapolation(double** matrice, int dimX, int dimY, int n){
+    int i, j;
+    double** res = createMatrice(dimX, dimY);
+    for(i = 0; i < dimX/n; i++){
+        for(j = 0; j < dimY/n; j++){
+            res[i*n][j*n] = matrice[i][j]*n;    // ajustement de la valeur par le facteur initial
+
         }
     }
     return res;

@@ -35,7 +35,7 @@ PrtVue vit(double** GradientX,double** GradientY,double** GradientT,int dimX,int
             diff = diff*-1;
         }
 
-        if (n==400){
+        if (n==100){
             Condition_arret = 1;
         }
         moyenne_termes = calcMoyCase(res.u, dimX, dimY);
