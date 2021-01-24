@@ -1,15 +1,28 @@
 #include "matrice.h"
 
+/** Distance entre 2 points
+  * @param Premier point
+  * @param Deuxieme point
+  */
 double distance2Points(double a, double b){
-    //retourne la distance entre 2 points a et b
     return (a-b)/2;
 }
 
+/** Intensite d'un pixel
+  * @param Matrice des pixels de l'image source
+  * @param Position X du pixel
+  * @param Position Y du pixel
+  */
 double getIntensityPixel(double** mat,int x,int y){
-    //retourne l'intensité dans un pixel
     return mat[x][y];
 }
 
+/** Gradient en X
+  * @param Matrice des pixels de l'image source
+  * @param Position X du pixel
+  * @param Position Y du pixel
+  * @param Dimension X de l'image
+  */
 double gradX(double** mat,int x, int y,int dimX){
     //retourne le gradient selon l'axe x
     if (x==0){
@@ -23,6 +36,12 @@ double gradX(double** mat,int x, int y,int dimX){
     }
 }
 
+/** Gradient en Y
+  * @param Matrice des pixels de l'image source
+  * @param Position X du pixel
+  * @param Position Y du pixel
+  * @param Dimension Y de l'image
+  */
 double gradY(double** mat,int x, int y,int dimY){
     //retourne le gradient selon l'axe y
     if (y==0){
@@ -36,11 +55,23 @@ double gradY(double** mat,int x, int y,int dimY){
     }
 }
 
+/** Gradient en Temps
+  * @param Matrice des pixels de l'image source
+  * @param Matrice des pixels de l'image source 2
+  * @param Position X du pixel
+  * @param Position Y du pixel
+  */
 double grad_t(double** mat1,double** mat2,int x, int y){
     //retourne le gradient selon le temps
     return getIntensityPixel(mat2,x,y)-getIntensityPixel(mat1,x,y);
 }
 
+/** Remplissage d'une matrice de gradients en X
+  * @param Matrice des pixels de l'image source
+  * @param Matrice resultante
+  * @param Dimension X de l'image
+  * @param Dimension Y de l'image
+  */
 void fillGradX(double** Intensite,double** matRes,int dimX,int dimY){
 	int x,y;
 	for(y=0;y<dimY;y++){
@@ -58,6 +89,12 @@ void fillGradX(double** Intensite,double** matRes,int dimX,int dimY){
 	}
 }
 
+/** Remplissage d'une matrice de gradients en Y
+  * @param Matrice des pixels de l'image source
+  * @param Matrice resultante
+  * @param Dimension X de l'image
+  * @param Dimension Y de l'image
+  */
 void fillGradY(double** Intensite,double** matRes,int dimX,int dimY){
 	int x,y;
 	for(y=0;y<dimY;y++){
@@ -73,6 +110,13 @@ void fillGradY(double** Intensite,double** matRes,int dimX,int dimY){
 	}
 }
 
+/** Remplissage d'une matrice de gradients en temps
+  * @param Matrice des pixels de l'image source
+  * @param Matrice des pixels de l'image source 2
+  * @param Matrice resultante
+  * @param Dimension X de l'image
+  * @param Dimension Y de l'image
+  */
 void fillGrad_t(double** Intensite1,double** Intensite2,double** matRes,int dimX,int dimY){
     int x,y;
 	for(y=0;y<dimY;y++){

@@ -22,8 +22,11 @@ B = reshape(B, dim);
 B1 = reshape(B1, dim);
 
 %Affichage de l'image
-image(img)
-hold on
+figure
+image(img);
 
 %Traçage des vecteurs
+figure
 quiver(B,B1);
+
+

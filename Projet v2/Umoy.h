@@ -18,21 +18,28 @@ et v moyens du coup ne tenez pas compte du nom arbitraire
 		double** U_moy;
 	};
 
+    /** Initialisation des matrices Umoy et Somme à 0
+    * @param Dimension X
+    * @param Dimension Y
+    */
 	Umoy InitUmoy(int dimX,int dimY);
 	/*
 	initialisation de la matrice Umoy et Somme avec des 0 et avec n=0
 	(n : nombre de termes stockés dans chaque case)
 	*/
 
+    /** Calcul de la moyenne de toutes les cases du tableau
+    * @param Tableau source
+    * @param Dimension X
+    * @param Dimension Y
+    */
 	double calcMoyCase(double** u,int sizeX, int sizeY);
-	/*
-	calcul de la moyenne de toute les cases du tableau
-	*/
 
+	/** Met a jour les parameptres de somme et de moyenne, et nombre de termes stockés
+    * @param U moyen
+    * @param Tableau source
+    */
 	void UpdateMoy(Umoy* U,double** u);
-	/*
-	sert à mettre à jour les matrices de somme et de moyenne
-	ainsi que le nombre de termes stockés
-	*/
+
 
 #endif

@@ -5,8 +5,8 @@
 	#include <math.h>
 	#include <stdio.h>
 	#include <stdlib.h>
-	/* structure faite pour contenir plusieurs matrices */
 
+	/* structure faite pour contenir plusieurs matrices */
 	typedef struct PrtVue PrtVue;
 	struct PrtVue
 	{
@@ -14,5 +14,9 @@
 		double** v;
 	};
 
+    /** Initialisation d'un conteneur pour les vitesses
+    * @param Dimension X de l'image
+    * @param Dimension Y de l'image
+    */
 	PrtVue InitPrtVue(int dimX, int dimY);
 #endif

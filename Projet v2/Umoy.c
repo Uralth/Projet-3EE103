@@ -1,5 +1,9 @@
 #include "Umoy.h"
 
+/** Initialisation des matrices Umoy et Somme à 0
+* @param Dimension X
+* @param Dimension Y
+*/
 Umoy InitUmoy(int dimX,int dimY){
 	Umoy res;
 
@@ -12,6 +16,11 @@ Umoy InitUmoy(int dimX,int dimY){
 	return res;
 }
 
+/** Calcul de la moyenne de toutes les cases du tableau
+  * @param Tableau source
+  * @param Dimension X
+  * @param Dimension Y
+  */
 double calcMoyCase(double** u,int sizeX, int sizeY){
     int i,j;
     double res =0.0;
@@ -23,6 +32,10 @@ double calcMoyCase(double** u,int sizeX, int sizeY){
     return res/(sizeX*sizeY);
 }
 
+/** Met a jour les parameptres de somme et de moyenne, et nombre de termes stockés
+  * @param U moyen
+  * @param Tableau source
+  */
 void UpdateUmoy(Umoy* U,double** u){
 	int i,j;
 	(U->n) += 1;

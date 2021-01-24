@@ -14,7 +14,7 @@ int main(){
     BmpImg image = readBmpImage(FILENAME);
     BmpImg image2= readBmpImage(FILENAME2);
     double** matrice = bmpToMatrice(image);
-    double** matrice2= bmpToMatrice(image2);
+    double** matrice2 = bmpToMatrice(image2);
     double** matriceGradX = createMatrice(image.dimX,image.dimY);
     double** matriceGradY = createMatrice(image.dimX,image.dimY);
     double** matriceGrad_t= createMatrice(image.dimX,image.dimY);
@@ -48,17 +48,27 @@ int main(){
     //printMatrice(u_m.U_moy,image.dimX,image.dimY);
     if( fichierTxt != NULL ) {
         MatriceToTxt(vit1.u, image.dimX, image.dimY,fichierTxt);
+        fclose(fichierTxt);
     } else { // Sinon on affiche un message
         printf ( " Erreur d'ouverture du fichier !" );
     }
 
     if( fichierTxt2 != NULL ) {
         MatriceToTxt(vit1.v, image.dimX, image.dimY,fichierTxt2);
+        fclose(fichierTxt2);
     } else { // Sinon on affiche un message
         printf ( " Erreur d'ouverture du fichier !" );
     }
 
     freeBmpImg(&image);
     freeBmpImg(&image2);
+    destroyMatrice(matrice, image.dimX,image.dimY);
+    destroyMatrice(matrice2, image.dimX,image.dimY);
+    destroyMatrice(matriceGradX, image.dimX,image.dimY);
+    destroyMatrice(matriceGradY, image.dimX,image.dimY);
+    destroyMatrice(matriceGrad_t, image.dimX,image.dimY);
+    destroyMatrice(vit2, image.dimX,image.dimY);
+    destroyMatrice(vit1.u, image.dimX,image.dimY);
+    destroyMatrice(vit1.v, image.dimX,image.dimY);
     return 0;
 }
