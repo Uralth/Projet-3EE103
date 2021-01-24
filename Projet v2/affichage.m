@@ -3,8 +3,8 @@ close all
 
 %% Horn & Schunck 
 %Ouverture des fichiers
-fileU = fopen('Frame 1.txt','r');
-fileV = fopen('Frame 2.txt','r');
+fileU = fopen('Frame u.txt','r');
+fileV = fopen('Frame v.txt','r');
 img = imread('Frame 1.bmp');
 img2 = imread('Frame 2.bmp');
 
@@ -39,8 +39,8 @@ title('Méthode de Horn & Schunck');
 
 %% Multi-résolution 
 %Ouverture des fichiers
-fileU = fopen('Frame 1i.txt','r');
-fileV = fopen('Frame 2i.txt','r');
+fileU = fopen('Frame ui.txt','r');
+fileV = fopen('Frame vi.txt','r');
 
 %Lecture des données
 A = fscanf(fileU,"%f");

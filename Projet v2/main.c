@@ -5,10 +5,10 @@
 #include "portfolio.h"
 #define FRAME1 "Frame 1.bmp"
 #define FRAME2 "Frame 2.bmp"
-#define TEXTE1 "Frame 1.txt"
-#define TEXTE2 "Frame 2.txt"
-#define TEXTE1I "Frame 1i.txt"
-#define TEXTE2I "Frame 2i.txt"
+#define TEXTE1 "Frame u.txt"
+#define TEXTE2 "Frame v.txt"
+#define TEXTE1I "Frame ui.txt"
+#define TEXTE2I "Frame vi.txt"
 #define N 2
 
 int main(){
@@ -92,7 +92,7 @@ int main(){
     }
 
 //    printMatrice(matrice, image.dimX, image.dimY);
-    printf ( "\nTest Multi echantillons\n" );
+    printf ( "\nTest Multi-echantillons\n" );
     matrice3 = sampleMatrix(matrice,image.dimX, image.dimY,N);
     matrice4 = sampleMatrix(matrice2,image.dimX, image.dimY,N);
 //    printMatrice(matrice3, image.dimX/N, image.dimY/N);

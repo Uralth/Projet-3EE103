@@ -86,7 +86,7 @@ void MatriceToTxt(double** matrice, int dimX, int dimY, FILE *fichier){
     fprintf(fichier, "%d\t%d\n", dimX, dimY);               //écriture des dimensions
     for(i = 0; i < dimX; i++){
         for(j = 0; j < dimY; j++){
-            fprintf(fichier,"%.2f\t", matrice[i][j]);               //écriture du pixel
+            fprintf(fichier,"%f\t", matrice[i][j]);               //écriture du pixel
         }
         fprintf(fichier,"\n");
     }
@@ -96,7 +96,7 @@ void MatriceToTxt(double** matrice, int dimX, int dimY, FILE *fichier){
   * @param Matrice source
   * @param dimension X de la matrice
   * @param dimension Y de la matrice
-  * @param facteur d'échantillonnage
+  * @param facteur d'echantillonnage
   * @return matrice echantillonnee
   */
 double** sampleMatrix(double** matrice, int dimX, int dimY, int n){
@@ -114,7 +114,7 @@ double** sampleMatrix(double** matrice, int dimX, int dimY, int n){
   * @param Matrice source
   * @param dimension X de la matrice
   * @param dimension Y de la matrice
-  * @param facteur d'échantillonnage
+  * @param facteur d'echantillonnage
   * @return Matrice interpolee
   */
 double** simpleMatrixInterpolation(double** matrice, int dimX, int dimY, int n){
